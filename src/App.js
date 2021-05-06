@@ -16,12 +16,6 @@ const App = () => {
   }, [currentId, dispatch]);
   return (
     <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">
-          Wisdom
-        </Typography>
-        <img className={classes.image} src={wisdom} alt="wisdom" height="60" />
-      </AppBar>
       <Grow in>
         <Container>
           <Grid

@@ -56,9 +56,10 @@ const Form = ({ currentId, setCurrentId }) => {
           {currentId ? "Editing" : "Share"} your wisdom
         </Typography>
         <TextField
+          className={classes.fileInput}
           name="creator"
           variant="outlined"
-          label="Creator"
+          label="Name"
           fullWidth
           value={postData.creator}
           onChange={(e) =>
@@ -66,6 +67,7 @@ const Form = ({ currentId, setCurrentId }) => {
           }
         />
         <TextField
+          className={classes.fileInput}
           name="title"
           variant="outlined"
           label="Title"
@@ -74,6 +76,7 @@ const Form = ({ currentId, setCurrentId }) => {
           onChange={(e) => setPostData({ ...postData, title: e.target.value })}
         />
         <TextField
+          className={classes.fileInput}
           name="message"
           variant="outlined"
           label="Message"
@@ -84,6 +87,7 @@ const Form = ({ currentId, setCurrentId }) => {
           }
         />
         <TextField
+          className={classes.fileInput}
           name="tags"
           variant="outlined"
           label="Tags"
@@ -108,20 +112,14 @@ const Form = ({ currentId, setCurrentId }) => {
         <Button
           className={classes.buttonSubmit}
           variant="contained"
-          color="primary"
           size="large"
+          color="primary"
           type="submit"
           fullWidth
         >
           Submit
         </Button>
-        <Button
-          variant="contained"
-          color="secondary"
-          size="small"
-          onClick={clear}
-          fullWidth
-        >
+        <Button variant="contained" size="small" onClick={clear} fullWidth>
           Clear
         </Button>
       </form>
